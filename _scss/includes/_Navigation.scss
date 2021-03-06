@@ -75,7 +75,7 @@
 
 .Navigation--mobile--toggled {
   @media screen and (max-width: $breakpoint) {
-    height: calc(130px + 4rem);
+    height: calc((1.5rem * 2) * 4);
     padding: 2rem 0;
 
     .Navigation__list {
