@@ -1,3 +1,7 @@
+html {
+  overflow-x: hidden; // Weird Firefox issue
+}
+
 body {
   background-attachment: fixed;
   background-image: $body-background-image;
