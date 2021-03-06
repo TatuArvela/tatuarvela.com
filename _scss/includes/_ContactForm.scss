@@ -9,7 +9,6 @@
 $form-height: 594px;
 
 .ContactForm {
-  @extend .Scrollbar;
   align-items: center;
   animation: eliminate-fade 0s 0.3s 1 forwards;
   backdrop-filter: blur(1rem);
@@ -88,7 +87,7 @@ $dog-ear-size: 4rem;
 
   &:hover,
   &:focus {
-    background: $body-background-color;
+    background: $theme-color;
     color: $white;
     outline: none;
     text-decoration: none;
@@ -121,7 +120,7 @@ $dog-ear-size: 4rem;
   transition: border 0.2s;
 
   &:focus {
-    border: $border-width solid $body-background-color;
+    border: $border-width solid $theme-color;
     outline: none;
   }
 }
@@ -142,7 +141,7 @@ $dog-ear-size: 4rem;
 
   &:hover,
   &:focus {
-    background: $body-background-color;
+    background: $theme-color;
     outline: none;
     text-decoration: none;
   }

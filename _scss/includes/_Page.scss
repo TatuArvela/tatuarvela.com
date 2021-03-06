@@ -1,15 +1,11 @@
 /** @define Page */
 
 .Page {
-  @extend .Scrollbar;
   box-sizing: border-box;
   contain: content;
   display: flex;
   flex-direction: column;
-  height: 100vh;
   min-height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
   padding: 3rem 2rem;
   width: 100%;
 

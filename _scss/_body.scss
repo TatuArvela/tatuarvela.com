@@ -1,8 +1,11 @@
 body {
+  background-attachment: fixed;
   background-image: $body-background-image;
+  background-repeat: no-repeat;
   color: $body-color;
   height: 100vh;
   margin: 0;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   width: 100vw;
 }

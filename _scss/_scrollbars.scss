@@ -1,6 +1,6 @@
-/** @define Scrollbar */
+* {
+  overscroll-behavior: none;
 
-.Scrollbar {
   &::-webkit-scrollbar {
     width: 0.5rem;
   }
