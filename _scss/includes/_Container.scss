@@ -15,10 +15,13 @@
 
   font-size: 7rem;
   font-weight: bold;
+  hyphens: auto;
   line-height: 1.2em;
   margin: 2rem 0;
   max-width: 55rem;
   transition: font-size 0.3s ease-out;
+  width: 100%;
+  word-break: break-word;
   word-spacing: 100vw;
 
   @media screen and (max-width: $breakpoint) {
@@ -38,4 +41,5 @@
   line-height: 1.8em;
   margin-bottom: 3rem;
   max-width: 55rem;
+  width: 100%;
 }

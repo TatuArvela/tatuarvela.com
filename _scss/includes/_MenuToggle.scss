@@ -18,7 +18,7 @@
   top: -6rem;
   transition: transform 0.2s ease-out;
   user-select: none;
-  width: 3rem;
+  width: 2rem;
   z-index: 2;
 
   &:hover {
@@ -29,10 +29,6 @@
     display: block;
     opacity: 1;
     pointer-events: auto;
-  }
-
-  @media screen and (max-width: $breakpoint-tiny) {
-    right: 1rem;
   }
 
   &--off {
