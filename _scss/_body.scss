@@ -3,9 +3,9 @@ body {
   background-image: $body-background-image;
   background-repeat: no-repeat;
   color: $body-color;
-  height: 100vh;
+  height: 100%;
   margin: 0;
   overflow-x: hidden;
   overflow-y: auto;
-  width: 100vw;
+  width: 100%;
 }
