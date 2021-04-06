@@ -1,14 +1,21 @@
 html {
-  font-size: 16px;
+  font-size: $font-size-default;
 }
 
 body {
   font-family: $font-family-sans-serif;
 }
 
-h2,
-.h2 {
-  font-size: 2rem;
+h1 {
+  font-size: $font-size-display;
+
+  @media screen and (max-width: $breakpoint) {
+    font-size: $font-size-display-mobile;
+  }
+}
+
+h2 {
+  font-size: $font-size-large;
 }
 
 h1,

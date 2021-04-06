@@ -35,7 +35,7 @@ $form-height: 594px;
   }
 }
 
-$dog-ear-size: 4rem;
+$dog-ear-size: 3rem;
 
 .ContactForm__form {
   background-color: $white;
@@ -55,7 +55,7 @@ $dog-ear-size: 4rem;
   margin: 0.5rem;
   max-height: $form-height;
   max-width: 420px;
-  padding: 4rem 2rem;
+  padding: 3rem 2rem;
   position: relative;
   text-align: left;
   transform: scale(1.2);
@@ -72,10 +72,10 @@ $dog-ear-size: 4rem;
   color: $primary;
   display: none;
   font-family: inherit;
-  font-size: 1.5rem;
+  font-size: $font-size-default;
   font-weight: bold;
   height: $dog-ear-size;
-  line-height: 4.4rem;
+  line-height: 3rem;
   padding: 0.6rem;
   position: absolute;
   right: 0;
@@ -96,6 +96,7 @@ $dog-ear-size: 4rem;
 
 .ContactForm__label {
   display: inline-block;
+  font-size: $font-size-secondary;
   margin-bottom: 0.5rem;
 }
 
@@ -111,7 +112,8 @@ $dog-ear-size: 4rem;
   border-radius: 0;
   color: $primary;
   display: block;
-  font-size: 1rem;
+  font-family: $font-family-sans-serif;
+  font-size: $font-size-secondary;
   height: auto;
   line-height: 1.5;
   margin-bottom: 1rem;
@@ -132,10 +134,9 @@ $dog-ear-size: 4rem;
   color: $white;
   cursor: pointer;
   font-family: inherit;
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  font-size: $font-size-default;
   margin: 0;
-  padding: 1rem;
+  padding: 0.5em 0.75em;
   transition: background-color 0.2s;
   width: auto;
 

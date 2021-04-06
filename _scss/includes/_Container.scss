@@ -13,31 +13,22 @@
   @extend .anim-fade-in-and-condense;
   @extend .anim-delay-1;
 
-  font-size: 7rem;
   font-weight: bold;
   hyphens: auto;
   line-height: 1.2em;
-  margin: 2rem 0;
+  margin: 1.5rem 0;
   max-width: 55rem;
   transition: font-size 0.3s ease-out;
   width: 100%;
   word-break: break-word;
   word-spacing: 100vw;
-
-  @media screen and (max-width: $breakpoint) {
-    font-size: 4rem;
-  }
-
-  @media screen and (max-width: $breakpoint-tiny) {
-    font-size: 3rem;
-  }
 }
 
 .Container__content {
   @extend .anim-fade-in;
   @extend .anim-delay-1;
 
-  font-size: 1.5rem;
+  font-size: $font-size-default;
   line-height: 1.8em;
   margin-bottom: 3rem;
   max-width: 55rem;
