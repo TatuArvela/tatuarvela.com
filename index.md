@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Evolving digital experiences
+title: Making digital things
 description: Software developer at Nitor, graduated from Haaga-Helia
 ---
 Software developer at
