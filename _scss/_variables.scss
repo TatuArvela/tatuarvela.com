@@ -3,7 +3,10 @@ $primary: #040f3d;
 
 $theme-color: #00b3ea;
 $theme-color-dark: #1d3bac;
-$body-background-image: linear-gradient(
+$body-background-image: radial-gradient(
+  rgba(0,0,0,0.3),
+  transparent
+), linear-gradient(
   180deg,
   $theme-color 10%,
   $theme-color-dark 90%
