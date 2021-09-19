@@ -2,24 +2,37 @@
   "name": "tatuarvela.com",
   "author": "Tatu Arvela",
   "version": "1.0.0",
-  "description": "Development tools package",
+  "private": true,
+  "description": "Tatu Arvela",
+  "keywords": [
+    "gatsby"
+  ],
   "scripts": {
-    "clean": "rimraf .jekyll-cache _site",
-    "install": "bundle",
-    "markdownlint": "markdownlint --fix ./*.md",
-    "prettier": "prettier --write --list-different -- ./_data/*.json ./**/*.html",
-    "start": "bundle exec jekyll serve",
-    "stylelint": "stylelint --fix \"./**/*.scss\""
+    "build": "gatsby build",
+    "clean": "gatsby clean",
+    "develop": "gatsby develop",
+    "serve": "gatsby serve",
+    "start": "gatsby develop"
+  },
+  "dependencies": {
+    "@fontsource/poppins": "^4.5.0",
+    "babel-plugin-styled-components": "^1.13.2",
+    "gatsby": "^3.13.0",
+    "gatsby-plugin-manifest": "^3.14.0",
+    "gatsby-plugin-react-helmet": "^4.14.0",
+    "gatsby-plugin-styled-components": "^4.13.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "react-ionicons": "^4.2.0",
+    "styled-components": "^5.3.1"
   },
   "devDependencies": {
-    "markdownlint-cli": "^0.26.0",
-    "prettier": "^2.0.5",
-    "rimraf": "^3.0.2",
-    "stylelint": "^13.2.0",
-    "stylelint-config-prettier": "^8.0.1",
-    "stylelint-config-sass-guidelines": "^7.0.0",
-    "stylelint-order": "^4.0.0",
-    "stylelint-prettier": "^1.1.2",
-    "stylelint-selector-bem-pattern": "^2.1.0"
+    "prettier": "^2.4.0",
+    "prop-types": "^15.7.2"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "singleQuote": true
   }
 }
