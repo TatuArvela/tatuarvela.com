@@ -1,6 +1,6 @@
 const siteMetadata = {
   author: 'Tatu Arvela',
-  description: 'Software developer at Nitor, graduated from Haaga-Helia',
+  description: 'Senior software developer at Nitor, graduated from Haaga-Helia',
   headline: 'Making digital things',
   image: 'static/image.png',
   siteUrl: 'https://tatuarvela.com',
