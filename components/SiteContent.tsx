@@ -15,7 +15,7 @@ const SiteContent = () => {
         {t("page.developerAt")}
         {nitor}
         {t("page.graduatedFrom")}
-        {haagaHelia}
+        {haagaHelia}.
       </p>
       <p>{t("page.expertise")}</p>
     </Page>

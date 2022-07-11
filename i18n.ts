@@ -20,7 +20,7 @@ export const en = {
       graduatedFrom: ", graduated from ",
       haagaHelia: "Haaga-Helia",
       expertise:
-        "My expertise is creating effective, dazzling and high-end digital services and web applications",
+        "My expertise is creating effective, dazzling and high-end digital services and web applications.",
     },
     contact: {
       title: "Contact me",
@@ -43,7 +43,7 @@ export const fi: I18n = {
     site: {
       description:
         "Työskentelen kehittäjänä Nitorilla ja valmistuin Haaga-Heliasta",
-      headline: "Teen digitaalisia asioita",
+      headline: "Teen digitaalisia juttuja",
     },
     navigation: {
       contact: "Ota yhteyttä",
@@ -52,10 +52,10 @@ export const fi: I18n = {
     page: {
       developerAt: "Työskentelen kehittäjänä ",
       nitor: "Nitorilla",
-      graduatedFrom: ", valmistuin ",
+      graduatedFrom: " ja valmistuin ",
       haagaHelia: "Haaga-Heliasta",
       expertise:
-        "Erityisosaamistani on luoda vaikuttavia, häikäiseviä ja korkealaatuisia digipalveluita ja verkkosovelluksia",
+        "Erityisosaamistani on luoda vaikuttavia, häikäiseviä ja korkealaatuisia digipalveluita ja verkkosovelluksia.",
     },
     contact: {
       title: "Ota yhteyttä",
