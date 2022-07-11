@@ -1,4 +1,4 @@
-import { CloseOutline } from "react-ionicons";
+import { CloseOutline } from "components/icons";
 import styled from "styled-components";
 import rgba from "styles/rgba";
 import {
@@ -53,7 +53,7 @@ const StyledCloseButton = styled.button<StyledCloseButtonProps>`
     height: 60%;
     width: 60%;
 
-    > svg {
+    > img {
       height: 100%;
       width: 100%;
     }

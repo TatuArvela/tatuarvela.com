@@ -1,4 +1,4 @@
-import { CloseOutline, ReorderFourOutline } from "react-ionicons";
+import { CloseOutline, MenuOutline } from "components/icons";
 import styled from "styled-components";
 import { BREAKPOINT_MOBILE } from "styles/themeVariables";
 
@@ -34,7 +34,7 @@ const StyledMobileNavigationToggle = styled.button`
     height: 100%;
     width: 100%;
 
-    > svg {
+    > img {
       height: 100%;
       width: 100%;
     }
@@ -51,7 +51,7 @@ const MobileNavigationToggle = ({
   onClick,
 }: MobileNavigationToggleProps) => (
   <StyledMobileNavigationToggle onClick={onClick}>
-    {isToggled ? <CloseOutline /> : <ReorderFourOutline />}
+    {isToggled ? <CloseOutline /> : <MenuOutline />}
   </StyledMobileNavigationToggle>
 );
 
