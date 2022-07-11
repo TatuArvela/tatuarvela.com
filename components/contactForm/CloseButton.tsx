@@ -46,17 +46,12 @@ const StyledCloseButton = styled.button<StyledCloseButtonProps>`
     }
   }
 
-  > span {
+  > svg {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 60%;
     width: 60%;
-
-    > img {
-      height: 100%;
-      width: 100%;
-    }
   }
 `;
 

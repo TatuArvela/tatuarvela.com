@@ -27,17 +27,12 @@ const StyledMobileNavigationToggle = styled.button`
     pointer-events: auto;
   }
 
-  > span {
+  > svg {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     width: 100%;
-
-    > img {
-      height: 100%;
-      width: 100%;
-    }
   }
 `;
 
