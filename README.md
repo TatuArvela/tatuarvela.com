@@ -8,7 +8,7 @@ This is the repository for my personal website.
 
 * Hosted on GitHub Pages
 * Deployed with GitHub Actions
-* Built with Gatsby
+* Built with Next.js
 * Made prettier with Prettier
 
-Copyright © Tatu Arvela
+Copyright © 2022 Tatu Arvela
