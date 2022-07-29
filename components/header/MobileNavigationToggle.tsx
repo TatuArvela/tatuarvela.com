@@ -1,10 +1,11 @@
 import { CloseOutline, MenuOutline } from "components/icons";
 import styled from "styled-components";
-import { BREAKPOINT_MOBILE } from "styles/themeVariables";
+import { BREAKPOINT_MOBILE, LINK_COLOR } from "styles/themeVariables";
 
 const StyledMobileNavigationToggle = styled.button`
   background: none;
   border: none;
+  color: ${LINK_COLOR};
   cursor: pointer;
   display: none;
   height: 1.75rem;
