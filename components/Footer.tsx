@@ -1,11 +1,11 @@
 import { useTranslation } from "i18n";
 import styled from "styled-components";
 import { animFadeIn } from "styles/animations";
-import { FONT_SIZE_SECONDARY } from "styles/themeVariables";
+import { FONT_SIZE_TINY } from "styles/themeVariables";
 
 const StyledFooter = styled.div`
   ${animFadeIn};
-  font-size: ${FONT_SIZE_SECONDARY};
+  font-size: ${FONT_SIZE_TINY};
   text-align: center;
 `;
 

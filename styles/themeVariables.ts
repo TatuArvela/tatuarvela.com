@@ -29,6 +29,7 @@ export const FONT_FAMILY_SANS_SERIF = `'Poppins', -apple-system, 'BlinkMacSystem
   'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'`;
 
 export const FONT_SIZE_DEFAULT = "21px";
+export const FONT_SIZE_TINY = "13px";
 export const FONT_SIZE_SECONDARY = "14px";
 export const FONT_SIZE_LARGE = "28px";
 export const FONT_SIZE_DISPLAY = "105px";
