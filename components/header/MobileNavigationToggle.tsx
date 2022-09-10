@@ -1,8 +1,11 @@
 import { CloseOutline, MenuOutline } from "components/icons";
+import { useTranslation } from "i18n";
 import styled from "styled-components";
+import { animFadeIn } from "styles/animations";
 import { BREAKPOINT_MOBILE, LINK_COLOR } from "styles/themeVariables";
 
 const StyledMobileNavigationToggle = styled.button`
+  ${animFadeIn};
   background: none;
   border: none;
   color: ${LINK_COLOR};
@@ -45,10 +48,17 @@ type MobileNavigationToggleProps = {
 const MobileNavigationToggle = ({
   isToggled,
   onClick,
-}: MobileNavigationToggleProps) => (
-  <StyledMobileNavigationToggle onClick={onClick}>
-    {isToggled ? <CloseOutline /> : <MenuOutline />}
-  </StyledMobileNavigationToggle>
-);
+}: MobileNavigationToggleProps) => {
+  const { t } = useTranslation();
+  return (
+    <StyledMobileNavigationToggle onClick={onClick}>
+      {isToggled ? (
+        <CloseOutline aria-label={t("navigation.close")} />
+      ) : (
+        <MenuOutline aria-label={t("navigation.open")} />
+      )}
+    </StyledMobileNavigationToggle>
+  );
+};
 
 export default MobileNavigationToggle;

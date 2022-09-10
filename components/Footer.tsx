@@ -14,9 +14,7 @@ const Footer = () => {
   const year = new Date().getFullYear();
   return (
     <StyledFooter>
-      <p>
-        &copy; {year} Tatu Arvela. {t("footer.allRightsReserved")}
-      </p>
+      <p>{`© ${year} Tatu Arvela. ${t("footer.allRightsReserved")}`}</p>
     </StyledFooter>
   );
 };

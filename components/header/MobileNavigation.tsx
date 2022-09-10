@@ -1,4 +1,5 @@
 import { useTranslation } from "i18n";
+import { useEffect, useState } from "react";
 import styled, { css } from "styled-components";
 import rgba from "styles/rgba";
 import {
@@ -11,6 +12,8 @@ import Link from "./links/Link";
 import LinkButton from "./links/LinkButton";
 import navigationLinks from "./navigationLinks";
 import useSwitchLocale from "./useSwitchLocale";
+
+const transitionDuration = 400;
 
 const toggledStyle = css`
   height: calc((1.25rem * 2) * 5);
@@ -29,7 +32,9 @@ const StyledMobileNavigation = styled.div`
   overflow: visible;
   position: relative;
   pointer-events: none;
-  transition: opacity 0.4s ease-out, height 0.4s ease-out, padding 0.4s ease-out;
+  transition: opacity ${transitionDuration}ms ease-out,
+    height ${transitionDuration}ms ease-out,
+    padding ${transitionDuration}ms ease-out;
   will-change: opacity, height, padding;
 
   @media screen and (max-width: ${BREAKPOINT_MOBILE}) {
@@ -45,19 +50,20 @@ const List = styled.ul`
   margin: 0;
   overflow: hidden;
   padding-left: 0;
-  pointer-events: ${(props) => (props.isOpen ? "auto" : "none")};
 `;
 
 const ListItem = styled.li`
   align-self: flex-end;
   display: none;
   flex-grow: 1;
-  line-height: 0;
-  margin: 0 2rem;
-  padding: 1.25rem 2rem;
+  height: 2.5rem;
+  margin: 0 4rem;
 
   @media screen and (max-width: ${BREAKPOINT_MOBILE}) {
-    display: block;
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
   }
 `;
 
@@ -69,24 +75,39 @@ type Props = {
 const MobileNavigation = ({ openForm, isOpen }: Props) => {
   const { t } = useTranslation();
   const switchLocale = useSwitchLocale();
+  // Hide links from DOM when the navigation is collapsed
+  const [renderLinks, setRenderLinks] = useState<boolean>(false);
+  useEffect(() => {
+    let timeout;
+    if (isOpen) {
+      setRenderLinks(true);
+    }
+    if (!isOpen && renderLinks) {
+      timeout = setTimeout(() => setRenderLinks(false), transitionDuration);
+    }
+  }, [isOpen, renderLinks]);
 
   return (
     <StyledMobileNavigation isOpen={isOpen}>
-      <List isOpen={isOpen}>
-        {navigationLinks.map((link) => (
-          <ListItem key={link.url}>
-            <Link url={link.url}>{link.text}</Link>
+      {renderLinks && (
+        <List>
+          {navigationLinks.map((link) => (
+            <ListItem key={link.url}>
+              <Link url={link.url}>{link.text}</Link>
+            </ListItem>
+          ))}
+          <ListItem>
+            <LinkButton onClick={openForm}>
+              {t("navigation.contact")}
+            </LinkButton>
           </ListItem>
-        ))}
-        <ListItem>
-          <LinkButton onClick={openForm}>{t("navigation.contact")}</LinkButton>
-        </ListItem>
-        <ListItem>
-          <LinkButton onClick={switchLocale}>
-            {t("navigation.switchLanguage")}
-          </LinkButton>
-        </ListItem>
-      </List>
+          <ListItem>
+            <LinkButton onClick={switchLocale}>
+              {t("navigation.switchLanguage")}
+            </LinkButton>
+          </ListItem>
+        </List>
+      )}
     </StyledMobileNavigation>
   );
 };

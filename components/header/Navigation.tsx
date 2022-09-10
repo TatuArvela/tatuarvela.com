@@ -1,5 +1,6 @@
 import { useTranslation } from "i18n";
 import styled from "styled-components";
+import { animFadeIn } from "styles/animations";
 import { BREAKPOINT_MOBILE, FONT_SIZE_DEFAULT } from "styles/themeVariables";
 
 import Link from "./links/Link";
@@ -8,6 +9,7 @@ import navigationLinks from "./navigationLinks";
 import useSwitchLocale from "./useSwitchLocale";
 
 const StyledNavigation = styled.div`
+  ${animFadeIn};
   display: flex;
   flex-direction: row;
   font-size: ${FONT_SIZE_DEFAULT};
@@ -22,7 +24,7 @@ const StyledNavigation = styled.div`
   @media screen and (max-width: ${BREAKPOINT_MOBILE}) {
     opacity: 0;
     pointer-events: none;
-    transform: translateX(5rem);
+    display: none;
   }
 `;
 

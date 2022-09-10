@@ -17,8 +17,9 @@ type ContactFormProps = {
 
 const ContactForm = ({ close, toggled }: ContactFormProps) => {
   const { t } = useTranslation();
+
   return (
-    <ModalWrapper toggled={toggled} height={FORM_HEIGHT}>
+    <ModalWrapper toggled={toggled} height={FORM_HEIGHT} aria-hidden={!toggled}>
       <Form
         toggled={toggled}
         method="POST"

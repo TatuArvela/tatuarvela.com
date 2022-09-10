@@ -9,7 +9,6 @@ import Navigation from "./Navigation";
 
 const StyledHeader = styled.div`
   ${animFadeIn};
-
   align-items: center;
   display: flex;
   flex-flow: row nowrap;

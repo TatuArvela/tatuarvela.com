@@ -13,6 +13,8 @@ export const en = {
     navigation: {
       contact: "Contact",
       switchLanguage: "Suomeksi",
+      close: "Close menu",
+      open: "Open menu",
     },
     page: {
       developerAt: "Senior software developer at ",
@@ -48,6 +50,8 @@ export const fi: I18n = {
     navigation: {
       contact: "Ota yhteyttä",
       switchLanguage: "In English",
+      close: "Sulje valikko",
+      open: "Avaa valikko",
     },
     page: {
       developerAt: "Työskentelen kehittäjänä ",

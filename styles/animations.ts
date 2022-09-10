@@ -12,7 +12,7 @@ export const animFadeIn = css`
   }
 
   animation: fade-in ease-in 1;
-  animation-duration: 0.8s;
+  animation-duration: 0.4s;
   animation-fill-mode: forwards;
   opacity: 0;
   will-change: opacity;

@@ -1,6 +1,16 @@
 import Link from "components/header/links/Link";
 import Page from "components/Page";
 import { useTranslation } from "i18n";
+import styled from "styled-components";
+
+const AccessibleContent = styled.p`
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+`;
 
 const SiteContent = () => {
   const { t } = useTranslation();
@@ -11,7 +21,16 @@ const SiteContent = () => {
 
   return (
     <Page pageTitle={t("site.headline")}>
-      <p>
+      <AccessibleContent>
+        {[
+          t("page.developerAt"),
+          t("page.nitor"),
+          t("page.graduatedFrom"),
+          t("page.haagaHelia"),
+          ".",
+        ].join("")}
+      </AccessibleContent>
+      <p aria-hidden="true">
         {t("page.developerAt")}
         {nitor}
         {t("page.graduatedFrom")}
