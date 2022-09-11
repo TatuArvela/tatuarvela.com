@@ -2,7 +2,7 @@ import { useTranslation } from "i18n";
 import NextHead from "next/head";
 
 const Head = () => {
-  const { t, locale } = useTranslation();
+  const { t } = useTranslation();
 
   const description = t("site.description");
   const title = `Tatu Arvela — ${t("site.headline")}`;
@@ -10,7 +10,6 @@ const Head = () => {
 
   return (
     <NextHead>
-      <html lang={locale} />
       <title>{title}</title>
       <meta name="description" content={description} />
 
