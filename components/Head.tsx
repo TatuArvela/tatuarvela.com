@@ -1,12 +1,17 @@
 import { useTranslation } from "i18n";
 import NextHead from "next/head";
 
+const ogLocales = ["fi_FI", "en_US"];
+
 const Head = () => {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
 
   const description = t("site.description");
   const title = `Tatu Arvela — ${t("site.headline")}`;
   const image = `https://tatuarvela.com/image.png`;
+
+  const ogLocale = ogLocales.find((item) => item.includes(locale));
+  const alternateOgLocale = ogLocales.find((item) => item !== ogLocale);
 
   return (
     <NextHead>
@@ -16,6 +21,9 @@ const Head = () => {
       <meta property="og:image" content={image} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
+
+      <meta property="og:locale" content={ogLocale} />
+      <meta property="og:locale:alternate" content={alternateOgLocale} />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
