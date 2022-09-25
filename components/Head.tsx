@@ -13,6 +13,9 @@ const Head = () => {
   const ogLocale = ogLocales.find((item) => item.includes(locale));
   const alternateOgLocale = ogLocales.find((item) => item !== ogLocale);
 
+  const canonicalUrl =
+    locale === "fi" ? "https://tatuarvela.com/fi" : "https://tatuarvela.com";
+
   return (
     <NextHead>
       <title>{title}</title>
@@ -31,6 +34,8 @@ const Head = () => {
       <meta name="twitter:image" content={image} />
 
       <meta name="theme-color" content="#040f3d" />
+
+      <link rel="canonical" href={canonicalUrl} />
     </NextHead>
   );
 };
