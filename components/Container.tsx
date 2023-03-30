@@ -1,11 +1,9 @@
 import { ReactNode } from "react";
 import styled from "styled-components";
-import {
-  ANIM_DELAY_1,
-  animFadeIn,
-  animFadeInAndCondense,
-} from "styles/animations";
+import { ANIM_DELAY_1, animFadeIn } from "styles/animations";
 import { FONT_SIZE_DEFAULT } from "styles/themeVariables";
+
+import Title from "./Title";
 
 const StyledContainer = styled.div`
   align-items: center;
@@ -14,21 +12,6 @@ const StyledContainer = styled.div`
   flex-grow: 1;
   justify-content: center;
   width: 100%;
-`;
-
-const Title = styled.h1`
-  ${animFadeInAndCondense};
-  animation-delay: ${ANIM_DELAY_1};
-  font-weight: bold;
-  hyphens: auto;
-  line-height: 1.2em;
-  margin: 1.8rem 0;
-  max-width: 55rem;
-  transition: font-size 0.3s ease-out;
-  width: 100%;
-  word-break: break-word;
-  word-spacing: 100vw;
-  text-align: center;
 `;
 
 const Content = styled.div`
@@ -48,7 +31,7 @@ type ContainerProps = {
 
 const Container = ({ title, children }: ContainerProps) => (
   <StyledContainer>
-    <Title>{title}</Title>
+    <Title title={title} />
     <Content>{children}</Content>
   </StyledContainer>
 );
