@@ -16,10 +16,12 @@ const Title = ({ title }: { title: string }) => (
 );
 
 const TitleElement = styled.h1`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   font-weight: bold;
   margin: 1.8rem 0;
   position: relative;
-  text-align: center;
   transition: font-size 0.3s ease-out;
   width: 100%;
 `;
