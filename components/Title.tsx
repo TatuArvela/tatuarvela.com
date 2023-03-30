@@ -22,7 +22,6 @@ const TitleElement = styled.h1`
   font-weight: bold;
   margin: 1.8rem 0;
   position: relative;
-  transition: font-size 0.3s ease-out;
   width: 100%;
 `;
 
@@ -71,6 +70,7 @@ const TitleSegmentBlock = styled.span<TitleSegmentBlockProps>`
   display: block;
   font-size: calc(${FONT_SIZE_DISPLAY} * ${(props) => props.scale});
   line-height: 1.2em;
+  transition: font-size 0.3s ease-out;
   white-space: nowrap;
   width: fit-content;
   ${(props) =>
