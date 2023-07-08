@@ -11,7 +11,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@fontsource/poppins": "^4.5.8",
+    "@fontsource/urbanist": "^5.0.4",
     "@svgr/webpack": "^6.2.1",
     "next": "latest",
     "react": "^18.2.0",

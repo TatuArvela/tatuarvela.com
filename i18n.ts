@@ -8,7 +8,7 @@ export const en = {
     site: {
       description:
         "Senior software developer at Nitor, graduated from Haaga-Helia",
-      headline: "Making digital things",
+      headline: "I create digital things.",
     },
     navigation: {
       contact: "Contact",
@@ -45,7 +45,7 @@ export const fi: I18n = {
     site: {
       description:
         "Työskentelen kehittäjänä Nitorilla ja valmistuin Haaga-Heliasta",
-      headline: "Teen digitaalisia juttuja",
+      headline: "Teen digitaalisia juttuja.",
     },
     navigation: {
       contact: "Ota yhteyttä",

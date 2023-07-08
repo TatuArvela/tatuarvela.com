@@ -19,9 +19,8 @@ const Content = styled.div`
   animation-delay: ${ANIM_DELAY_1};
   font-size: ${FONT_SIZE_DEFAULT};
   line-height: 1.8em;
-  margin-bottom: 3rem;
-  max-width: 55rem;
-  width: 100%;
+  max-width: 80vw;
+  width: max-content;
 `;
 
 type ContainerProps = {

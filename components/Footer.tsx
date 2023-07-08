@@ -7,6 +7,7 @@ const StyledFooter = styled.div`
   ${animFadeIn};
   font-size: ${FONT_SIZE_TINY};
   text-align: center;
+  margin-top: 2rem;
 `;
 
 const Footer = () => {

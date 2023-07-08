@@ -7,9 +7,23 @@ import {
   FONT_SIZE_DISPLAY_MOBILE,
 } from "styles/themeVariables";
 
+const splitTitle = (title) => {
+  const titleSegments = [];
+  let buffer = "";
+  for (let index = 0; index < title.length; index++) {
+    const char = title[index];
+    buffer = buffer + char;
+    if ((char === " " && buffer.length > 2) || index === title.length - 1) {
+      titleSegments.push(buffer);
+      buffer = "";
+    }
+  }
+  return titleSegments;
+};
+
 const Title = ({ title }: { title: string }) => (
   <TitleElement>
-    {title.split(" ").map((segment) => (
+    {splitTitle(title).map((segment) => (
       <TitleSegment key={segment} segment={segment} />
     ))}
   </TitleElement>
@@ -19,8 +33,8 @@ const TitleElement = styled.h1`
   align-items: center;
   display: flex;
   flex-direction: column;
-  font-weight: bold;
-  margin: 1.8rem 0;
+  font-weight: 600;
+  margin: 0 0 2rem 0;
   position: relative;
   width: 100%;
 `;

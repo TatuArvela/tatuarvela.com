@@ -13,7 +13,7 @@ const StyledHeader = styled.div`
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
-  margin: 0 0 2rem 0;
+  margin: 0;
   padding: 0;
 `;
 

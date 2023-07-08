@@ -27,7 +27,7 @@ const StyledMobileNavigation = styled.div`
   display: flex;
   flex-direction: column;
   height: 0;
-  margin: 0 -3.5rem;
+  margin: 1.5rem -3.5rem;
   opacity: 0;
   overflow: visible;
   position: relative;

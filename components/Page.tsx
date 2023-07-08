@@ -1,4 +1,5 @@
-import "@fontsource/poppins/400.css";
+import "@fontsource/urbanist/400.css";
+import "@fontsource/urbanist/600.css";
 
 import { useState } from "react";
 import { ReactNode } from "react";
@@ -17,11 +18,11 @@ const StyledPage = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding: 2rem 2rem;
+  padding: 1.5rem 1.5rem;
   width: 100%;
 
   @media screen and (max-width: ${BREAKPOINT_TINY}) {
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
   }
 `;
 

@@ -4,7 +4,7 @@ export const WHITE = "#f5f5f5";
 export const PRIMARY = "#040f3d";
 
 export const THEME_COLOR = PRIMARY;
-export const BACKGROUND_COLOR_1 = "#00b3ea";
+export const BACKGROUND_COLOR_1 = "#3cb1d5";
 export const BACKGROUND_COLOR_2 = "#1d3bac";
 export const BACKGROUND_COLOR_3 = "#e0ffb4";
 export const BACKGROUND_IMAGE = `linear-gradient(
@@ -24,7 +24,7 @@ export const BORDER_WIDTH = "2px";
 export const LINK_BG = "transparent";
 export const LINK_COLOR = PRIMARY;
 
-export const FONT_FAMILY_SANS_SERIF = `'Poppins', -apple-system, 'BlinkMacSystemFont',
+export const FONT_FAMILY_SANS_SERIF = `'Urbanist', -apple-system, 'BlinkMacSystemFont',
   'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif,
   'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'`;
 
@@ -32,8 +32,8 @@ export const FONT_SIZE_DEFAULT = "21px";
 export const FONT_SIZE_TINY = "13px";
 export const FONT_SIZE_SECONDARY = "14px";
 export const FONT_SIZE_LARGE = "28px";
-export const FONT_SIZE_DISPLAY = "105px";
-export const FONT_SIZE_DISPLAY_MOBILE = "63px";
+export const FONT_SIZE_DISPLAY = "100px";
+export const FONT_SIZE_DISPLAY_MOBILE = "70px";
 
 export const BREAKPOINT_MOBILE = "919px";
 export const BREAKPOINT_TINY = "359px";
