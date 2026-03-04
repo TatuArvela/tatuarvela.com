@@ -1,6 +1,7 @@
 import { useTranslation } from "i18n";
 import { useEffect, useState } from "react";
 import styled, { css } from "styled-components";
+import { EASE_OUT } from "styles/animations";
 import rgba from "styles/rgba";
 import {
   BREAKPOINT_MOBILE,
@@ -33,9 +34,9 @@ const StyledMobileNavigation = styled.div<{ $isOpen: boolean }>`
   position: relative;
   pointer-events: none;
   transition:
-    opacity ${transitionDuration}ms ease-out,
-    height ${transitionDuration}ms ease-out,
-    padding ${transitionDuration}ms ease-out;
+    opacity ${transitionDuration}ms ${EASE_OUT},
+    height ${transitionDuration}ms ${EASE_OUT},
+    padding ${transitionDuration}ms ${EASE_OUT};
   will-change: opacity, height, padding;
 
   @media screen and (max-width: ${BREAKPOINT_MOBILE}) {

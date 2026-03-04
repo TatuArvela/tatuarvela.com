@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { animFadeIn } from "styles/animations";
+import { animFadeIn, EASE_OUT } from "styles/animations";
 import { BREAKPOINT_MOBILE } from "styles/themeVariables";
 
 import MobileNavigation from "./MobileNavigation";
@@ -23,7 +23,7 @@ const Title = styled.h2`
   line-height: 1.5;
   margin: 0;
   transform: translateX(1.5rem);
-  transition: transform 0.4s ease-out;
+  transition: transform 0.4s ${EASE_OUT};
 
   @media screen and (max-width: ${BREAKPOINT_MOBILE}) {
     margin-left: 0;

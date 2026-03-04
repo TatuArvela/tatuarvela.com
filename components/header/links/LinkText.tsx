@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { EASE_OUT } from "styles/animations";
 import { LINK_COLOR } from "styles/themeVariables";
 
 const LinkText = styled.span`
@@ -11,7 +12,7 @@ const LinkText = styled.span`
     display: block;
     left: 0;
     position: absolute;
-    transition: width 0.2s ease;
+    transition: width 0.2s ${EASE_OUT};
     width: 0;
     will-change: width;
   }

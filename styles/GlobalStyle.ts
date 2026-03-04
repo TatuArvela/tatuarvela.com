@@ -29,6 +29,7 @@ const GlobalStyle = createGlobalStyle`
     overflow-y: auto;
     width: 100%;
     font-family: ${FONT_FAMILY_SANS_SERIF};
+    overscroll-behavior: none;
   }
 
   h1 {

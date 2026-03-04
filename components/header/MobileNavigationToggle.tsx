@@ -1,7 +1,7 @@
 import { CloseOutline, MenuOutline } from "components/icons";
 import { useTranslation } from "i18n";
 import styled from "styled-components";
-import { animFadeIn } from "styles/animations";
+import { animFadeIn, EASE_OUT } from "styles/animations";
 import { BREAKPOINT_MOBILE, LINK_COLOR } from "styles/themeVariables";
 
 const StyledMobileNavigationToggle = styled.button`
@@ -16,7 +16,7 @@ const StyledMobileNavigationToggle = styled.button`
   overflow: hidden;
   padding: 0;
   pointer-events: none;
-  transition: transform 0.2s ease-out;
+  transition: transform 0.2s ${EASE_OUT};
   user-select: none;
   width: 1.75rem;
   z-index: 2;

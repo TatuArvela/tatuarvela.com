@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { EASE_EMPHASIZED } from "styles/animations";
 import { PRIMARY, WHITE } from "styles/themeVariables";
 
 type FormProps = {
@@ -29,7 +30,7 @@ const Form = styled.form<FormProps>`
   position: relative;
   text-align: left;
   transform: ${(props) => (props.$toggled ? "scale(1)" : "scale(1.2)")};
-  transition: transform 0.3s;
+  transition: transform 0.3s ${EASE_EMPHASIZED};
   width: 98vw;
   will-change: transform;
 `;

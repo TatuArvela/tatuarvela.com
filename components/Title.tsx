@@ -1,6 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import styled, { css } from "styled-components";
-import { ANIM_DELAY_1, animFadeInAndCondense } from "styles/animations";
+import {
+  ANIM_DELAY_1,
+  animFadeInAndCondense,
+  EASE_OUT,
+} from "styles/animations";
 import {
   BREAKPOINT_MOBILE,
   FONT_SIZE_DISPLAY,
@@ -84,7 +88,7 @@ const TitleSegmentBlock = styled.span<TitleSegmentBlockProps>`
   display: block;
   font-size: calc(${FONT_SIZE_DISPLAY} * ${(props) => props.$scale ?? 1});
   line-height: 1.2em;
-  transition: font-size 0.3s ease-out;
+  transition: font-size 0.3s ${EASE_OUT};
   white-space: nowrap;
   width: fit-content;
   ${(props) =>
