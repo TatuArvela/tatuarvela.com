@@ -1,3 +1,4 @@
+import { TextareaHTMLAttributes } from "react";
 import styled from "styled-components";
 
 import { inputStyle } from "../../../styles/inputStyle";
@@ -11,12 +12,12 @@ const StyledTextArea = styled.textarea`
 type TextAreaProps = {
   id: string;
   label: string;
-} & typeof StyledTextArea.props;
+} & TextareaHTMLAttributes<HTMLTextAreaElement>;
 
 const TextArea = ({ id, label, ...rest }: TextAreaProps) => (
   <>
     <Label htmlFor={id} label={label} />
-    <StyledTextArea type="text" name={id} id={id} {...rest} />
+    <StyledTextArea name={id} id={id} {...rest} />
   </>
 );
 

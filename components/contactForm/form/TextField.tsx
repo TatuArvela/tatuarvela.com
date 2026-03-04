@@ -1,3 +1,4 @@
+import { InputHTMLAttributes } from "react";
 import styled from "styled-components";
 import { inputStyle } from "styles/inputStyle";
 
@@ -10,7 +11,7 @@ const StyledTextField = styled.input`
 type TextFieldProps = {
   id: string;
   label: string;
-} & typeof StyledTextField.props;
+} & InputHTMLAttributes<HTMLInputElement>;
 
 const TextField = ({ id, label, ...rest }: TextFieldProps) => (
   <>

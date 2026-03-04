@@ -1,3 +1,4 @@
+import { ButtonHTMLAttributes } from "react";
 import styled from "styled-components";
 import {
   BACKGROUND_COLOR_1,
@@ -31,7 +32,10 @@ const ButtonLabel = styled.span`
   position: relative;
 `;
 
-const SubmitButton = ({ children, ...rest }) => (
+const SubmitButton = ({
+  children,
+  ...rest
+}: ButtonHTMLAttributes<HTMLButtonElement>) => (
   <StyledSubmitButton type="submit" {...rest}>
     <ButtonLabel>{children}</ButtonLabel>
   </StyledSubmitButton>

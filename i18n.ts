@@ -7,7 +7,7 @@ export const en = {
   translations: {
     site: {
       description:
-        "Senior software developer at Nitor, graduated from Haaga-Helia",
+        "Creating effective, dazzling and high-end digital services and web applications.",
       headline: "I create digital things.",
     },
     navigation: {
@@ -17,10 +17,6 @@ export const en = {
       open: "Open menu",
     },
     page: {
-      developerAt: "Senior software developer at ",
-      nitor: "Nitor",
-      graduatedFrom: ", graduated from ",
-      haagaHelia: "Haaga-Helia",
       expertise:
         "My expertise is creating effective, dazzling and high-end digital services and web applications.",
     },
@@ -44,7 +40,7 @@ export const fi: I18n = {
   translations: {
     site: {
       description:
-        "Työskentelen kehittäjänä Nitorilla ja valmistuin Haaga-Heliasta",
+        "Luon vaikuttavia, häikäiseviä ja korkealaatuisia digipalveluita ja verkkosovelluksia.",
       headline: "Teen digitaalisia juttuja.",
     },
     navigation: {
@@ -54,10 +50,6 @@ export const fi: I18n = {
       open: "Avaa valikko",
     },
     page: {
-      developerAt: "Työskentelen kehittäjänä ",
-      nitor: "Nitorilla",
-      graduatedFrom: " ja valmistuin ",
-      haagaHelia: "Haaga-Heliasta",
       expertise:
         "Erityisosaamistani on luoda vaikuttavia, häikäiseviä ja korkealaatuisia digipalveluita ja verkkosovelluksia.",
     },
@@ -79,12 +71,20 @@ I18nContext.displayName = "TranslationContext";
 
 export const I18nProvider = I18nContext.Provider;
 
-const getPropByPath = (object, path, defaultValue) => {
+const getPropByPath = (
+  object: Record<string, unknown> | unknown,
+  path: string | string[],
+  defaultValue: string,
+): string => {
   const _path = Array.isArray(path) ? path : path.split(".");
   if (object && _path.length) {
-    return getPropByPath(object[_path.shift()], _path, defaultValue);
+    return getPropByPath(
+      (object as Record<string, unknown>)[_path.shift()!],
+      _path,
+      defaultValue,
+    );
   }
-  return object === undefined ? defaultValue : object;
+  return object === undefined ? defaultValue : (object as string);
 };
 
 export const useTranslation = () => {

@@ -9,7 +9,7 @@ import {
 } from "styles/themeVariables";
 
 type StyledCloseButtonProps = {
-  size: string;
+  $size: string;
 };
 
 const StyledCloseButton = styled.button<StyledCloseButtonProps>`
@@ -25,15 +25,17 @@ const StyledCloseButton = styled.button<StyledCloseButtonProps>`
   font-family: inherit;
   font-size: ${FONT_SIZE_DEFAULT};
   font-weight: bold;
-  height: ${(props: StyledCloseButtonProps) => props.size};
+  height: ${(props) => props.$size};
   overflow: hidden;
   padding: 0;
   position: absolute;
   right: 0;
   text-decoration: none;
   top: 0;
-  transition: background-color 0.2s, color 0.2s;
-  width: ${(props: StyledCloseButtonProps) => props.size};
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+  width: ${(props) => props.$size};
 
   &:hover,
   &:focus {
@@ -55,10 +57,13 @@ const StyledCloseButton = styled.button<StyledCloseButtonProps>`
   }
 `;
 
-type CloseButtonProps = typeof StyledCloseButton.props;
+type CloseButtonProps = {
+  size: string;
+  onClick: () => void;
+};
 
-const CloseButton = (props: CloseButtonProps) => (
-  <StyledCloseButton type="button" {...props}>
+const CloseButton = ({ size, onClick }: CloseButtonProps) => (
+  <StyledCloseButton type="button" $size={size} onClick={onClick}>
     <CloseOutline />
   </StyledCloseButton>
 );

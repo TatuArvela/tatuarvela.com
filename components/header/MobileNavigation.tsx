@@ -22,7 +22,7 @@ const toggledStyle = css`
   opacity: 1;
 `;
 
-const StyledMobileNavigation = styled.div`
+const StyledMobileNavigation = styled.div<{ $isOpen: boolean }>`
   box-shadow: inset 0 0 10px ${rgba(PRIMARY, 25)};
   display: flex;
   flex-direction: column;
@@ -32,13 +32,14 @@ const StyledMobileNavigation = styled.div`
   overflow: visible;
   position: relative;
   pointer-events: none;
-  transition: opacity ${transitionDuration}ms ease-out,
+  transition:
+    opacity ${transitionDuration}ms ease-out,
     height ${transitionDuration}ms ease-out,
     padding ${transitionDuration}ms ease-out;
   will-change: opacity, height, padding;
 
   @media screen and (max-width: ${BREAKPOINT_MOBILE}) {
-    ${({ isOpen }) => isOpen && toggledStyle}
+    ${({ $isOpen }) => $isOpen && toggledStyle}
   }
 `;
 
@@ -77,18 +78,25 @@ const MobileNavigation = ({ openForm, isOpen }: Props) => {
   const switchLocale = useSwitchLocale();
   // Hide links from DOM when the navigation is collapsed
   const [renderLinks, setRenderLinks] = useState<boolean>(false);
+
+  // Immediately show links when opening (state adjustment during render)
+  if (isOpen && !renderLinks) {
+    setRenderLinks(true);
+  }
+
+  // Delay hiding links when closing for the transition animation
   useEffect(() => {
-    let timeout;
-    if (isOpen) {
-      setRenderLinks(true);
+    if (!isOpen) {
+      const timeout = setTimeout(
+        () => setRenderLinks(false),
+        transitionDuration,
+      );
+      return () => clearTimeout(timeout);
     }
-    if (!isOpen && renderLinks) {
-      timeout = setTimeout(() => setRenderLinks(false), transitionDuration);
-    }
-  }, [isOpen, renderLinks]);
+  }, [isOpen]);
 
   return (
-    <StyledMobileNavigation isOpen={isOpen}>
+    <StyledMobileNavigation $isOpen={isOpen}>
       {renderLinks && (
         <List>
           {navigationLinks.map((link) => (

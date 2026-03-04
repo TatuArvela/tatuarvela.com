@@ -11,4 +11,4 @@ This is the repository for my personal website.
 * Built with Next.js
 * Made prettier with Prettier
 
-Copyright © 2022 Tatu Arvela
+Copyright © 2026 Tatu Arvela

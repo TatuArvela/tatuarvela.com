@@ -18,7 +18,9 @@ const StyledNavigation = styled.div`
   pointer-events: auto;
   position: relative;
   transform: translateX(0);
-  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  transition:
+    opacity 0.4s ease-out,
+    transform 0.4s ease-out;
   will-change: opacity;
 
   @media screen and (max-width: ${BREAKPOINT_MOBILE}) {

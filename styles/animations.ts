@@ -1,37 +1,37 @@
-import { css } from "styled-components";
+import { css, keyframes } from "styled-components";
 
-export const animFadeIn = css`
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-
-    to {
-      opacity: 1;
-    }
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
   }
 
-  animation: fade-in ease-in 1;
+  to {
+    opacity: 1;
+  }
+`;
+
+export const animFadeIn = css`
+  animation: ${fadeIn} ease-in 1;
   animation-duration: 0.4s;
   animation-fill-mode: forwards;
   opacity: 0;
   will-change: opacity;
 `;
 
-export const animFadeInAndCondense = css`
-  @keyframes fade-in-and-condense {
-    from {
-      letter-spacing: 0.05em;
-      opacity: 0;
-    }
-
-    to {
-      letter-spacing: normal;
-      opacity: 1;
-    }
+const fadeInAndCondense = keyframes`
+  from {
+    letter-spacing: 0.05em;
+    opacity: 0;
   }
 
-  animation: fade-in-and-condense;
+  to {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+`;
+
+export const animFadeInAndCondense = css`
+  animation: ${fadeInAndCondense};
   animation-duration: 0.8s;
   animation-fill-mode: forwards;
   opacity: 0;
